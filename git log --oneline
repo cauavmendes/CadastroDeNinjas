@@ -1,0 +1,17 @@
+[33mcommit 179df1a1e8d1ca62956c8aad58786a589f7a5efd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mAula02[m[33m, [m[1;31morigin/Aula02[m[33m)[m
+Author: Cauã Mendes <caua11mendes@gmail.com>
+Date:   Tue Apr 7 16:11:22 2026 -0300
+
+    Cria uma entidade no banco de dados a partir do NinjaModel
+
+[33mcommit ccbc47458cca67342a8e44f8ba29d476658edcca[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Cauã Mendes <caua11mendes@gmail.com>
+Date:   Tue Apr 7 15:18:24 2026 -0300
+
+    Criado a controller
+
+[33mcommit 5803c976a30491a702ad2d3a33bc5df186a50d05[m
+Author: Cauã Mendes <caua11mendes@gmail.com>
+Date:   Tue Apr 7 12:04:04 2026 -0300
+
+    Cadastro de Ninjas
