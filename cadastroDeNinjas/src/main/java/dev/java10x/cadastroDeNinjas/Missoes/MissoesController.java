@@ -3,6 +3,8 @@ package dev.java10x.cadastroDeNinjas.Missoes;
 import dev.java10x.cadastroDeNinjas.Ninjas.Controller.Service.NinjaService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("missoes")
 public class MissoesController {
@@ -35,7 +37,7 @@ public class MissoesController {
 
     // GET -- Mandar uma requisição para mostrar as missões
     @GetMapping("/listarMissao")
-    public String listarMissao(){
-        return "Missao listada";
+    public List<MissoesModel> listarMissao(){
+        return missoesService.listarMissao();
     }
 }

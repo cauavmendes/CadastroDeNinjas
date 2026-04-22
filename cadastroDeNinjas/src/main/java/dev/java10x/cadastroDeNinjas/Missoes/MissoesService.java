@@ -3,6 +3,8 @@ package dev.java10x.cadastroDeNinjas.Missoes;
 import dev.java10x.cadastroDeNinjas.Ninjas.Controller.Service.NinjaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MissoesService {
     private final MissoesRepository missoesRepository;
@@ -20,5 +22,9 @@ public class MissoesService {
 
     public void deletarMissao(Long id){
         ninjaRepository.deleteById(id);
+    }
+
+    public List<MissoesModel> listarMissao() {
+        return missoesRepository.findAll();
     }
 }
