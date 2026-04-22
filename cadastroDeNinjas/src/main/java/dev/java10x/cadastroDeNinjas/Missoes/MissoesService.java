@@ -21,7 +21,7 @@ public class MissoesService {
     }
 
     public void deletarMissao(Long id){
-        ninjaRepository.deleteById(id);
+        missoesRepository.deleteById(id);
     }
 
     public List<MissoesModel> listarMissao() {

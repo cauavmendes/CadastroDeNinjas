@@ -32,7 +32,7 @@ public class MissoesController {
     // DELETE -- Mandar uma requisição para deletar as missões
     @DeleteMapping("/deletarMissao/{id}")
     public void deletarMissao(@PathVariable Long id){
-        ninjaService.deletarNinjaPorId(id);
+        missoesService.deletarMissao(id);
     }
 
     // GET -- Mandar uma requisição para mostrar as missões
