@@ -27,4 +27,12 @@ public class MissoesService {
     public List<MissoesModel> listarMissao() {
         return missoesRepository.findAll();
     }
+
+    public MissoesModel alterarMissao(Long id, MissoesModel missaoAtualizada){
+        if(missoesRepository.existsById(id)){
+            missaoAtualizada.setId(id);
+            return missoesRepository.save(missaoAtualizada);
+        }
+        return null;
+    }
 }
