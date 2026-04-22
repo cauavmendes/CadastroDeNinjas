@@ -1,5 +1,6 @@
 package dev.java10x.cadastroDeNinjas.Missoes;
 
+import dev.java10x.cadastroDeNinjas.Ninjas.Controller.Service.NinjaService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -7,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 public class MissoesController {
 
     private final MissoesService missoesService;
+    private final NinjaService ninjaService;
 
-    public MissoesController(MissoesService missoesService) {
+    public MissoesController(MissoesService missoesService, NinjaService ninjaService) {
         this.missoesService = missoesService;
+        this.ninjaService = ninjaService;
     }
 
     // POST -- Mandar uma requisição para criar as missões
@@ -25,9 +28,9 @@ public class MissoesController {
     }
 
     // DELETE -- Mandar uma requisição para deletar as missões
-    @DeleteMapping("/deletarMissao")
-    public String deletarMissao(){
-        return "Missao deletada";
+    @DeleteMapping("/deletarMissao/{id}")
+    public void deletarMissao(@PathVariable Long id){
+        ninjaService.deletarNinjaPorId(id);
     }
 
     // GET -- Mandar uma requisição para mostrar as missões
