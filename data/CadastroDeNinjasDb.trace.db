@@ -253,6 +253,7 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 45 more
+<<<<<<< HEAD
 2026-04-21 12:11:28.985764-03:00 database: wrong user or password; user: "CADASTRO_BD"
 org.h2.message.DbException: Wrong user name or password [28000-240]
 	at org.h2.message.DbException.get(DbException.java:223)
@@ -661,3 +662,20 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 45 more
+=======
+2026-04-17 01:07:31.298900-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]id BIGINT AUTO_INCREMENT PRIMARY KEY"; expected "INSERT"; SQL statement:
+id BIGINT AUTO_INCREMENT PRIMARY KEY [42001-240]
+2026-04-17 01:08:21.627491-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE tb_cadastro\000d\000a[*]MODIFY id BIGINT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE tb_cadastro
+MODIFY id BIGINT AUTO_INCREMENT [42001-240]
+2026-04-17 01:08:26.806768-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE TB_CADASTRO\000d\000a[*]MODIFY id BIGINT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE TB_CADASTRO
+MODIFY id BIGINT AUTO_INCREMENT [42001-240]
+2026-04-17 01:08:40.788763-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE TB_CADASTRO\000d\000a[*]MODIFY ID BIGINT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE TB_CADASTRO
+MODIFY ID BIGINT AUTO_INCREMENT [42001-240]
+>>>>>>> b2f2503 (feat: Adiciona a rota de deleção do ninja por id)
