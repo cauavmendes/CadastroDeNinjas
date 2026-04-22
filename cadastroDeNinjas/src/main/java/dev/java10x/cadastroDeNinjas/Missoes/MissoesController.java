@@ -6,26 +6,32 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("missoes")
 public class MissoesController {
 
+    private final MissoesService missoesService;
+
+    public MissoesController(MissoesService missoesService) {
+        this.missoesService = missoesService;
+    }
+
     // POST -- Mandar uma requisição para criar as missões
-    @PostMapping("/criar")
-    public String criarMissao() {
-        return "Missao criada com sucesso";
+    @PostMapping("/criarMissao")
+    public MissoesModel criarMissao(@RequestBody MissoesModel missao) {
+        return missoesService.criarMissao(missao);
     }
 
     // PUT -- Mandar uma requisição parar alterar as missões
-    @PutMapping("/alterar")
+    @PutMapping("/alterarMissao")
     public String alterarMissao(){
         return "Missao alterada";
     }
 
     // DELETE -- Mandar uma requisição para deletar as missões
-    @DeleteMapping("/deletar")
+    @DeleteMapping("/deletarMissao")
     public String deletarMissao(){
         return "Missao deletada";
     }
 
     // GET -- Mandar uma requisição para mostrar as missões
-    @GetMapping("/listar")
+    @GetMapping("/listarMissao")
     public String listarMissao(){
         return "Missao listada";
     }
