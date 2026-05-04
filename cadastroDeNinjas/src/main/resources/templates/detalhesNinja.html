@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Detalhes do Ninja</title>
+    <title>Detalhes do Usuário</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <style>
         body {
@@ -82,7 +82,7 @@
     </style>
 </head>
 <body>
-<h1>Detalhes do Ninja</h1>
+<h1>Detalhes do Usuário</h1>
 <div>
     <img th:src="${ninja.imgUrl}" alt="${ninja.nome}" width="200" />
     <h2 th:text="${ninja.nome}"></h2>
@@ -106,6 +106,6 @@
         </tbody>
     </table>
 </div>
-<a href="/ninjas/ui/listar">Voltar para a lista de ninjas</a>
+<a href="/ninjas/ui/listar">Voltar para a lista de usuários</a>
 </body>
 </html>
